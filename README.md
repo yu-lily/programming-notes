@@ -1,5 +1,5 @@
 ## Lily's Programming Notes
-A repository of notes, papers, and resources on programming better. Mainly for my personal use, but hopefully helpful to other people as well.
+A repository of notes, papers, and resources on programming better. Mainly for my personal use (so expect a somewhat casual tone to the notes), but hopefully helpful to other people as well.
 
 ## Resources
 

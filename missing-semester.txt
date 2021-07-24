@@ -1,0 +1,97 @@
+Lecture 1
+Windows vs linux paths
+Windows uses backslashes (\) and represents each partition as different roots
+Linux uses forward slashes (/) and represents all partitions as mounted together
+
+cd -
+Go back to previous directory
+
+command < file.txt
+read file as input
+
+command > file.txt
+output to file
+
+command >> file.txt
+append output to file
+
+command1 | command2
+pipe output of first command to second command
+
+command1; command2
+allows putting two commands on the same line
+
+Lecture 2
+
+tldr as alternative to man for big packages (have to install)
+
+find to find files, and do something to all found files with -exec argument
+
+echo $? to check error code of last command
+
+grep to search actual contents of files
+
+history 1 | grep
+search your history
+
+ctrl-r also for history search
+
+tree for recursively listing of directories
+
+Lecture 4
+
+sed
+"stream editor", search and replace with regex
+
+awk
+column operator on space-delimited columns
+
+Lecture 5
+Job Control
+Ctrl-Z Suspends a process instead of stopping it
+& at end runs program in the background
+nohup - no hangup, keeps jobs running
+jobs, kill - useful commands for handling jobs
+fg, bg - continue a program in foreground or background
+
+Terminal Multiplexers
+tmux allows you to attach and detach from different terminal sessions
+
+Dotfiles
+Saves aliases between sessions
+GNU stow, symlink allow you to keep all your dotfiles in a single folder
+(and make them appear to the system as where they should be) so that you can track with version control
+ln -s to symlink
+
+Remote Machines
+You can run commands directly with ssh, example: ssh foobar@server ls
+This can be uses to pipe outputs locally
+Seriously just go to the remote machines section when you actually need to ssh into something
+https://missing.csail.mit.edu/2020/command-line/
+
+Lecture 6
+Git Data Model
+Git stores directories as trees and files as "blobs".
+File store is separate from the mapping of blobs inside trees and trees to commits (so data isn't stored twice), "objects" and "refs" folder in hidden .git file.
+Blobs, trees, commits all don't actually contain data, they just contain pointers to the data (referenced by hash).
+
+You don't have to include all changes with every commit, this is the purpose of the separation of git add and git commit.
+git commit -a commits all changes to files already tracked, but not new files.
+
+git log shows a flattened, linear-ized version of the version history.
+git log --graph (--all -- decorate) shows version history as a graph.
+
+HEAD is a pointer showing where you're looking at right now (git checkout changes where HEAD points to, and changes the contents of your working directory accordingly)
+
+git clone <url> <destination> - you can clone to a specified folder, given as an argument
+
+
+Notes on commit message convention:
+https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+https://chris.beams.io/posts/git-commit/
+
+Start with capitalized, less than 50 char summary with no period
+
+Explanatory text about what and why, rather than how,
+wrapped to 72 characters. Speak in imperative, "Fix bug" instead of 
+"Fixes bug" or "Fixed bug".

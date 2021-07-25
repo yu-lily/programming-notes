@@ -1,0 +1,26 @@
+"Workflow management" tools - useful for linking programs writting in different languages, C++, Python, R, etc.
+make is an example, also demoed in Missing Semester class.
+These allow the user to specify dependencies between files.
+
+"provenance" of data - everything needed to re-create an output should be automatically recorded in a format other programs can read.
+This means versioning data, recording versions of programs used, and parameters used.
+
+"Make incremental changes" - Parallels between scientific and open source programming, as opposed to commercial programming.
+Scientists and open source programmers don't get requirements from customers, and these requirements often change.
+
+"Frequent feedback and course correction" - Work in steps roughly an hour long, in iterations about a week long.
+This accomadates cognitive working memory and focus constraints.
+__agile development__ (look this up later)
+
+"DRY", "Don't repeat yourself" - More difficult to maintain, if code is copy-pasted two times and you need to make a change, you have to change two things.
+This applies to data too, data should have a single authoritative source of truth
+
+"defensive programming" - Add assertions to check stuff, everyone makes mistakes.
+Assertions can also be seen as "executable documentation", they explain the program while also checking behavior
+
+Unit tests - find good resources for building habits to consistently create tests, and create good tests (look this up later)
+Ultimate goal is to unit test for the sake of your own time and sanity, not for the sake of testing
+
+"turn bugs into test cases" - regression testing, one example of a good habit for testing
+
+Section 7

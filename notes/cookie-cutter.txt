@@ -1,0 +1,8 @@
+Tools used:
+make, Sphinx (creating documentation), python, tox (venv, unit testing)
+
+Conventions:
+Keep an untouched, immutable version of the original dataset, work with and save interim copies
+Name notebooks in the format <step>-<ghuser>-<description>.ipynb
+virtualenvwrapper for venvs
+Save secrets in .env file in root (gitignored), 
